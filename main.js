@@ -6,9 +6,7 @@ import './style.css'
 // `
 
 import * as THREE from 'three';
-import {GUI} from 'three/examples/jsm/libs/lil-gui.module.min.js';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
-
 import * as BufferGeometryUtils from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
@@ -16,10 +14,9 @@ import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import { Vector3 } from 'three';
 
+//Test2
+
 let composer, effect;
-
-//TestTestTest
-
 var boost = 0;
 var EaseVal = 0;
 var particle1Count = 600;
@@ -205,7 +202,6 @@ function Particle(scene) {
 }
 
 
-console.log(particles);
 
 
 Particle.prototype.update = function () {
@@ -241,8 +237,6 @@ Particle.prototype.update = function () {
 // const controls = new OrbitControls(camera, renderer.domElement);
 
 
-console.log(window);
-
 function updateCamera() {
   const camOffset = 1000;
   const time = clock.getElapsedTime() + boost + camOffset;
@@ -263,7 +257,6 @@ function trackCamera(obj)
 {
   camera.lookAt(obj);
 }
-
 
 
 function animate() {
