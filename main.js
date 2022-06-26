@@ -18,6 +18,8 @@ import { Vector3 } from 'three';
 
 let composer, effect;
 
+//TestTestTest
+
 var boost = 0;
 var EaseVal = 0;
 var particle1Count = 600;
@@ -93,7 +95,6 @@ const camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerH
 camera.position.setZ(40);
 
 
-
 const renderer = new THREE.WebGLRenderer();
 document.body.appendChild(renderer.domElement);
 
@@ -123,16 +124,16 @@ composer.addPass( renderScene );
 composer.addPass( bloomPass );
 
 
-// window.addEventListener('touchstart', function (evt) {
+window.addEventListener('touchstart', function (evt) {
 
-//   dcontrols.enabled = true;
-//   evt.preventDefault();
-//   console.log('touch test');
-//   dcontrols.enabled = true;
-//   instructions.style.display = 'none';
-//   blocker.style.display = 'none';
+  dcontrols.enabled = true;
+  evt.preventDefault();
+  console.log('touch test');
+  dcontrols.enabled = true;
+  instructions.style.display = 'none';
+  blocker.style.display = 'none';
 
-// }, false);
+}, false);
 
 //GrannyKnot
 class GrannyKnot extends THREE.Curve {
@@ -200,11 +201,11 @@ function Particle(scene) {
   this.offset = new THREE.Vector3((Math.random()-0.5)* 2.5, (Math.random()-0.5) * 3, (Math.random()-0.5) * 2);
   this.rotate = new THREE.Vector3(-Math.random()* 0.01 + 0.01, Math.random()* 0.005 ,Math.random()*0.01);
   scene.add(this.pMesh);
-  // console.log("Mesh added");
+
 }
 
 
-
+console.log(particles);
 
 
 Particle.prototype.update = function () {
@@ -240,7 +241,7 @@ Particle.prototype.update = function () {
 // const controls = new OrbitControls(camera, renderer.domElement);
 
 
-
+console.log(window);
 
 function updateCamera() {
   const camOffset = 1000;
